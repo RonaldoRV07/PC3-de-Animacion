@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Diseño Gráfico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <div class="container-header">
+            <h1 class="logo">Diseño Gráfico S.A.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#parallax-1">Inicio</a></li>
+                    <li><a href="#content-section-1">Servicios</a></li>
+                    <li><a href="#parallax-2">Quienes somos</a></li>
+                    <li><a href="#content-section-2">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Parallax 1 -->
+    <section class="parallax" id="parallax-1">
+        <div class="content">
+            <h1>Bienvenido al Mundo del Diseño Gráfico</h1>
+            <p>Explora las tendencias más actuales en diseño gráfico y aprende a crear piezas visuales impactantes.</p>
+            <p>Nuestro equipo de expertos ofrece servicios personalizados para satisfacer todas tus necesidades creativas, desde diseño de logotipos hasta creación de identidades de marca completas. ¡Transforma tus ideas en realidad con nosotros!</p>
+            <!-- Botón de llamada a la acción -->
+            <button class="btn-cta">Descubre nuestros servicios</button>
+        </div>
+    </section>
+
+    <!-- Sección de Contenido 1 -->
+    <section class="content-section" id="content-section-1">
+        <h1>Nuestros Servicios</h1>
+        <p>En Diseño Gráfico S.A., ofrecemos una amplia gama de servicios para satisfacer todas tus necesidades creativas. Desde el diseño de logotipos hasta la creación de campañas publicitarias completas, nuestro equipo está listo para llevar tu visión a la realidad.</p>
+        <p>¡Haz click en algunos de las imagenes para mas informacion!</p>
+        <div class="galeria">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="Imagen1.jpg" alt="Proyecto 1">
+                    <div class="overlay">
+                        <h3>Diseño de Logotipos</h3>
+                        <p>Creación de logotipos personalizados que representan la identidad de tu marca. Nos aseguramos de que tu logotipo sea único y memorable.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="Imagen2.jpg" alt="Proyecto 2">
+                    <div class="overlay">
+                        <h3>Diseño de Publicidad</h3>
+                        <p>Diseño de materiales publicitarios que captan la atención y comunican efectivamente. Creamos campañas visuales impactantes que ayudan a promover tus productos.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="Imagen.jpg" alt="Proyecto 3">
+                    <div class="overlay">
+                        <h3>Identidad Corporativa</h3>
+                        <p>Desarrollo de una identidad visual coherente para fortalecer la imagen de tu marca. Nos aseguramos de que cada elemento visual hable de tu filosofía empresarial.</p>
+                    </div>
+                </div>
+                <!-- Añadir más servicios según sea necesario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Parallax 2 -->
+    <section class="parallax" id="parallax-2">
+        <div class="content">
+            <h1>Quiénes Somos</h1>
+            <p>En Diseño Gráfico S.A., somos un equipo apasionado por el arte visual y la comunicación efectiva. Nos dedicamos a crear experiencias visuales memorables que transmiten la esencia de cada marca con la que trabajamos. Con años de experiencia en el sector, hemos colaborado con una amplia gama de clientes, desde pequeñas empresas emergentes hasta grandes corporaciones, siempre adaptando nuestro enfoque a las necesidades únicas de cada proyecto.</p>
+            
+            <p>Nuestro compromiso es brindar un servicio de calidad, desde el desarrollo de logotipos impactantes hasta la creación de identidades corporativas completas. Nos enorgullecemos de nuestra creatividad y del esfuerzo que dedicamos a entender profundamente a nuestros clientes y sus audiencias. En Diseño Gráfico S.A., cada diseño es una obra única que representa la historia y valores de la marca.</p>
+    
+            <p>Además de nuestra pasión por el diseño, nos guiamos por la innovación y la mejora continua. Sabemos que el diseño es una herramienta poderosa para comunicar ideas y emociones, y estamos aquí para ayudar a nuestros clientes a destacarse en un mercado competitivo. ¡Únete a nosotros y descubre cómo podemos hacer que tu marca brille!</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contenido 2 -->
+<!-- Sección de Contenido 2 -->
+<section class="content-section" id="content-section-2">
+    <h2>Contacto</h2>
+    <p>¡Déjanos ayudarte a llevar tu marca al siguiente nivel! Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+    
+    <div class="contact-form">
+        <form id="contactForm" action="javascript:void(0);">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Diseño Gráfico S.A. Ronaldo Rafael Vasquez.</p>
+</footer>
+
+<!-- Script para manejar el formulario -->
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita el envío real del formulario
+
+        // Obtén los valores de los campos del formulario
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        // Verificación de campos (puedes personalizarla según sea necesario)
+        if (name && email && phone && message) {
+            // Simulación del envío del formulario
+            alert("¡Gracias, " + name + "! Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.");
+
+            // Limpia el formulario después del envío
+            document.getElementById("contactForm").reset();
+        } else {
+            alert("Por favor, completa todos los campos.");
+        }
+    });
+</script>
+
+</body>
+</html>
